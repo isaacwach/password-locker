@@ -34,6 +34,19 @@ class Credential:
         password=''.join(choice(passcode) for num in range(size))
         
         return password
+     @classmethod
+    def display_credentials(cls, password):
+        
+        #generate an empty user credential list
+        user_credential_list=[]
+        
+        '''
+        loop through the the credential list to get credentials of a single user
+        '''
+        for credential in cls.credential_list
+            if credential.user_password=password
+                user_credential_list.append(credential)
+        return user_credential_list
         
         
         
