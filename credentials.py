@@ -18,6 +18,22 @@ class Credential:
             credential_name: user account's name 
             credential_password: user account's password
         '''
+     def save_credential(self):
+        Credential.credential_list.append(self)
+        
+    @classmethod
+    def generate_password(cls):
+        '''
+        method to generate a random passcode
+        '''
+        size=6
+        
+        passcode=string.ascii_uppercase+string.digits+string.ascii_uppercase
+        
+        #creating the login password
+        password=''.join(choice(passcode) for num in range(size))
+        
+        return password
         
         
         
