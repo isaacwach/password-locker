@@ -26,4 +26,17 @@ class User:
     def display_user(cls):
         return cls.user_list 
     
+    @classmethod
+    def log_in(cls, name, passcode):
+        '''
+        method to allow a user to login into their account
+        
+        returns: 
+        user credentials if the name and passcode are correct for the user 
+        False: for incorrect name or passcode
+        '''
+        for user in cls.user_list:
+            if user.username=name and user.password=passcode:
+                return Credential.credential_list
+        return False
         
