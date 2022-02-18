@@ -34,7 +34,7 @@ class Credential:
         password=''.join(choice(passcode) for num in range(size))
         
         return password
-     @classmethod
+    @classmethod
     def display_credentials(cls, password):
         
         #generate an empty user credential list
@@ -47,6 +47,16 @@ class Credential:
             if credential.user_password=password
                 user_credential_list.append(credential)
         return user_credential_list
+    
+    @classmethod 
+    def credential_exixt(cls, name):
+        '''
+        A method to check if a credential exists in the credential list 
+        '''
+        for credential in cls.credential_list:
+            if credential.credential_name == name:
+                return True
+        return False
         
         
         
