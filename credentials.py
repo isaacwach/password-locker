@@ -9,6 +9,15 @@ class Credential:
     '''
     
     credential_list = []
+    def __init__(self, user_name, user_password, credential_name, credential_password):
+        
+        '''
+        Args:
+            user_name: name of the user
+            user_password: user login password
+            credential_name: user account's name 
+            credential_password: user account's password
+        '''
         
         
         
