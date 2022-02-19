@@ -24,7 +24,7 @@ class TestCredentials(unittest.TestCase):
         '''
         Test case to test if the credential object is saved into the credential list
         '''
-        self,new_credential.save_credential()
+        self.new_credential.save_credential()
         self.assertEqual(len(Credential.credential_list), 1)
         
     def test_save_multiple_credentials(self):
@@ -33,7 +33,15 @@ class TestCredentials(unittest.TestCase):
         '''
         self.new_credential.save_credential()
         test_credential=Credential("Isaac", "havertz", "gmail", "Wr673fts")
+        test_credential.save_credential()
         self.assertEqual(len(Credential.credential_list), 2)
+        
+    def test_generate_passwords(self):
+        '''
+        To test of the generated password is valid to log into user credentials 
+        '''
+        test_generated_password=self.new_credential.generate_password()
+        self.assertEqual(len(test_generated_password), 6)
         
         
         
