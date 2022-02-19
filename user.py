@@ -51,4 +51,10 @@ class User:
             if user.username==name:  
                 return True
         return False
+    def find_credential(cls, name):
+        for credential in Credential.credential_list:
+            if credential.credential_name==name:
+                return True
+        return False
+    
         
