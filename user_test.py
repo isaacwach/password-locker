@@ -52,5 +52,14 @@ class test_user(unittest.TestCase):
         found_credential=User.find_credential("Paypal")
         self.assertEqual(found_credential, False)
         
+    def test_log_in(self):
+        '''
+        to test whether the user can log in their accounts
+        '''
+        self.new_user.save_user()
+        test_user=User("Shee", "kapipi")
+        test_user.save_user()
+        found_credential=User.log_in("Shee", "kapipi")
+        self.assertEqual(found_credential, credential.credential_list)
         
 
