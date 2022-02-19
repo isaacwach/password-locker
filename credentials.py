@@ -18,6 +18,10 @@ class Credential:
             credential_name: user account's name 
             credential_password: user account's password
         '''
+        self.user_name = user_name
+        self.user_password = user_password
+        self.credential_name = credential_name
+        self.credential_password = credential_password
     def save_credential(self):
         Credential.credential_list.append(self)
         
