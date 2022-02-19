@@ -16,7 +16,7 @@ class test_user(unittest.TestCase):
         self.new_user=User(Isaac, havertz)
         
     def tearDown(self):
-        User.user_list[]
+        User.user_list=[]
         
     def test_init(self):
         '''

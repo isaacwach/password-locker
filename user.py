@@ -36,7 +36,7 @@ class User:
         False: for incorrect name or passcode
         '''
         for user in cls.user_list:
-            if user.username=name and user.password=passcode:
+            if user.username==name and user.password==passcode:
                 return Credential.credential_list
         return False
     

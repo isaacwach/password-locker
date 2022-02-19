@@ -18,7 +18,7 @@ class Credential:
             credential_name: user account's name 
             credential_password: user account's password
         '''
-     def save_credential(self):
+    def save_credential(self):
         Credential.credential_list.append(self)
         
     @classmethod
@@ -43,8 +43,8 @@ class Credential:
         '''
         loop through the the credential list to get credentials of a single user
         '''
-        for credential in cls.credential_list
-            if credential.user_password=password
+        for credential in cls.credential_list:
+            if credential.user_password==password:
                 user_credential_list.append(credential)
         return user_credential_list
     
