@@ -60,6 +60,31 @@ class test_user(unittest.TestCase):
         test_user=User("Shee", "kapipi")
         test_user.save_user()
         found_credential=User.log_in("Shee", "kapipi")
-        self.assertEqual(found_credential, credential.credential_list)
+        self.assertEqual(found_credential, Credential.credential_list)
+        
+    def test_display_user(self):
+        '''
+        Test case to test if a user can see a list of all the users saved
+        '''
+        
+        self.assertEqual( User.display_user() , User.user_list )
+        
+    def test_user_exist(self):
+        
+        '''
+        Test to check if we can return a boolean if we can't find the user
+        '''
+        
+        # Save the new user
+        self.new_user.save_user()
+
+        test_user = User("sharon","do")
+
+        test_user.save_user()
+        
+        # use contact exist method
+        user_exists = User.user_exist("sharon")
+        
+        self.assertTrue(user_exists)
         
 
