@@ -83,7 +83,7 @@ class test_user(unittest.TestCase):
         test_user.save_user()
         
         # use contact exist method
-        user_exists = User.user_exist("sharon")
+        user_exists = User.user_exists("sharon")
         
         self.assertTrue(user_exists)
         
