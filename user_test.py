@@ -15,5 +15,8 @@ class test_user(unittest.TestCase):
     def setUp(self):
         self.new_user=User(Isaac, havertz)
         
+    def tearDown(self):
+        User.user_list[]
+        
     
 
