@@ -194,7 +194,18 @@ def main():
                     print("\n")
                     
                     
+        elif short_codes=="q":
+            '''
+            Exit the application 
+            '''
+            print("\n")
+            print("Bye")
+            break 
         
+        else:
+            print("\n")
+            print("Please use the indicated short codes")
+            print("\n")
                         
         
     
