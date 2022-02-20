@@ -62,12 +62,12 @@ class TestCredentials(unittest.TestCase):
         # Save the new credential
         self.new_credential.save_credential()
 
-        test_credential = Credential("justus2","Facebook","facebook17")
+        test_credential = Credential("Isaac", "havertz", "gmail", "Wr673fts")
 
         test_credential.save_credential()
         
         # use contact exist method
-        credential_exists = Credential.credential_exist("Facebook")
+        credential_exists = Credential.credential_exist("Isaac")
         
         self.assertTrue(credential_exists)
         
