@@ -58,6 +58,23 @@ def main():
     print('''welcome to password locker app \n
           Use these short codes to navigate through the app.''')
     
+    while True:
+        
+        print('''  Short codes:
+              ca-creates a user account \n
+              du-displays names of current account and users \n
+              lg-to log in to your account \n
+              q-quit from the account safe account ''')
+        
+        #take users short codes inputs
+        short_codes =input().lower()
+        
+        if short_codes =="ca":
+            print("User name...")  
+            username=input()
+            
+            print("password") 
+            password=input() 
     
 if __name__ == '__main__':
     main()
