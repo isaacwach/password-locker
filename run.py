@@ -151,6 +151,51 @@ def main():
                         print(f"credentials for {credential_name} has been successfully created and saved")  
                         print("\n")     
                         
+                elif short_codes=="dc":
+                    
+                   if display_credentials(password):
+                       print("\n") 
+                       print(f"{user_name}\'s credentials")
+                       print("-"*10)
+                       
+                       for credential in display_credentials(password):
+                           print(f"Account......{credential.credential_name}")
+                           print(f"Password.....{credential.credential_password}")
+                           print("-"*10)
+                           
+                    else:
+                        print("\n") 
+                        print("You have not added any credentials")
+                        print("\n") 
+                
+                elif short_codes=="cg":
+                    '''
+                    To create a credential with generated password 
+                    '''
+                    print("\n")
+                    print("New credential") 
+                    print("-"*10)  
+                    
+                    print("Name of the credential.....")
+                    credential_name=(input)
+                    
+                    save_credential(Credential(password, credential_name, (create_generated_password(credential_name))))
+                    print("\n")
+                    print(f"Credentials for {credential_name} have been created and saved") 
+                    print("\n")
+                    
+                elif short_codes=="ex":
+                    print(f"{username}, Thank you for using the password locker")
+                    print("\n")
+                    break  
+                else:
+                    print("\n") 
+                    print("Short code does not exist")
+                    print("\n")
+                    
+                    
+        
+                        
         
     
 if __name__ == '__main__':
