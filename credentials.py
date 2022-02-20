@@ -61,6 +61,19 @@ class Credential:
             if credential.credential_name == name:
                 return True
         return False
+    
+    @classmethod
+    def delete_credential(self):
+        '''
+        Method to delete credentials from the credential list 
+        '''
+        Credential.credential_list.remove(self)
+        
+    @classmethod
+    def copy_password(cls, password):
+        found_credential= Credential.display_credentials(password)
+        pyperclip.copy_password(found_credential.password)
+        
         
         
         
