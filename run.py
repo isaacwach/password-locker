@@ -11,7 +11,7 @@ def save_users(user):
     '''
     user.save_users()
     
-def check_exiisting_users(name):
+def check_existing_users(name):
     
     return User.user_exists(name)
 
@@ -25,6 +25,14 @@ def user_log_in(name, passcode):
     log_in=User.log_in(name, passcode)
     if log_in !=False:
         return User.log_in(name, passcode)
+    
+def display_users():
+    '''
+    Method that returns all saved users at a given point in time 
+    '''
+    return User.display_user()
+
+
     
     
     
