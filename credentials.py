@@ -63,11 +63,15 @@ class Credential:
         return False
     
     @classmethod
-    def delete_credential(self):
+    def save_new_credential(self):
+        Credential.credential_list.append(self)
+    
+    @classmethod
+    def delete_credential(cls, password):
         '''
         Method to delete credentials from the credential list 
         '''
-        Credential.credential_list.remove(self)
+        Credential.credential_list.remove(password)
         
     @classmethod
     def copy_password(cls, password):
