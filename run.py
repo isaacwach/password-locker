@@ -5,11 +5,11 @@ def create_user(username, password):
     new_user=User(username, password)
     return new_user
 
-def save_users(user):
+def save_user(user):
     '''
     method to save a user account 
     '''
-    user.save_users()
+    user.save_user()
     
 def check_existing_users(name):
     
@@ -81,6 +81,27 @@ def main():
             print("\n")
             print(f"{username} welcome to password locker")
             print("\n")
+            
+        elif short_codes =="du":
+            '''
+            Display the names of current users 
+            '''
+            
+            if display_users():
+                print("\n")
+                print("These are the current registred uders")
+                print("-"*10)
+                
+                for user in display_users():
+                    print(f"{user.username}")
+                    print("-"*10)
+                    
+            else:
+                print("\n")
+                print("Password locker has no existing users, be the first user")
+                print("\n")
+                
+        
     
 if __name__ == '__main__':
     main()
