@@ -75,6 +75,12 @@ def main():
             
             print("password") 
             password=input() 
+            
+            save_user(create_user(username,password))
+            
+            print("\n")
+            print(f"{username} welcome to password locker")
+            print("\n")
     
 if __name__ == '__main__':
     main()
