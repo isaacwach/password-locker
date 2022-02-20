@@ -100,7 +100,57 @@ def main():
                 print("\n")
                 print("Password locker has no existing users, be the first user")
                 print("\n")
+         
+         elif short_codes=="lg":
+                print("\n")
+                print("Log into your account")
+                print("Enter your user name")
+                username=input()
                 
+                print("Enter your account password")
+                password=input()
+                
+                if user_log_in(username,password)==None:
+                    print("\n")
+                    print("Please try again or create an account")
+                    print("\n")
+                    
+                else:
+                    user_log_in(username,password)
+                    print("\n")
+                    print(f'''{username} welcome to your credentials account \n
+                          Use these short codes to navigate around''')
+                    
+                    while True:
+                        '''
+                        Loop to run methods once a user logs in 
+                        '''
+                        print(''' Short Codes: 
+                              cc-add an account 
+                              dc-display credentials 
+                              cg-create a credential with a generated password  
+                              ex- exit credentials''')
+                        
+                        short_codes=input().lower()  
+                        if short_codes=="cc":
+                        
+                        print("\n")
+                        print("New credentials")
+                        print("-"*10)  
+                        
+                        print("Name of the credential....")
+                        credential_name=input()  
+                        
+                        print("Credential password")
+                        credential_password=input() 
+                        
+                        #create and save a new credential
+                        save_credentials=(create_credential(password, credential_name, credential_password))
+                        
+                        print("\n")  
+                        print(f"credentials for {credential_name} has been successfully created and saved")  
+                        print("\n")     
+                        
         
     
 if __name__ == '__main__':
