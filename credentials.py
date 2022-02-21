@@ -66,17 +66,7 @@ class Credential:
     def save_new_credential(self):
         Credential.credential_list.append(self)
     
-    @classmethod
-    def delete_credential(cls, password):
-        '''
-        Method to delete credentials from the credential list 
-        '''
-        Credential.credential_list.remove(password)
-        
-    @classmethod
-    def copy_password(cls, password):
-        found_credential= Credential.display_credentials(password)
-        pyperclip.copy_password(found_credential.password)
+  
         
         
         

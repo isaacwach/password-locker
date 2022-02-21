@@ -71,16 +71,9 @@ class TestCredentials(unittest.TestCase):
         
         self.assertTrue(credential_exists)
         
-    def test_delete_credential(self):
-        """
-        test method to test if we can remove an account credentials from our credentials_list
-        """
-        self.new_credential.save_credential()
-        test_credential = Credential("zacs", "ayzaq", "Twitter","Pyt654")
-        test_credential.save_credential()
-
-        self.new_credential.delete_credential(password)
-        self.assertEqual(len(Credential.credential_list),1)
+   
+        
+    
         
         
         
